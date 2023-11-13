@@ -1,33 +1,27 @@
 import random
-
-
-def function_(min, max):
+def function_Random(min, max):
     """
-    Random integer.
+    randomly select an integer and return the value
     """
     return random.randint(min, max)
-
-
-def function_B():
+def function_Operation():
     """
     This function will return arithmetic operation(plus, minus or multiplication) randomly
     """
     return random.choice(['+', '-', '*'])
-
-
-def function_C(n1, n2, o):
+def function_Result(n1, n2, o):
     """
     This Function calculates the appropriate arithmetic operation and return the result
     """
     p = f"{n1} {o} {n2}"
-    if o == '+': a = n1 - n2
-    elif o == '-': a = n1 + n2
+    if o == '+': a = n1 + n2
+    elif o == '-': a = n1 - n2
     else: a = n1 * n2
     return p, a
 
 def math_quiz():
     """
-    
+    This function is main quiz function which calculates the actual value that user has an input and provide the answers and matches the answer and provide appropriate message
     """
     s = 0
     t_q = 3
@@ -36,9 +30,9 @@ def math_quiz():
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
     for _ in range(t_q):
-        n1 = function_A(1, 10); n2 = function_A(1, 5); o = function_B()
+        n1 = function_Random(1, 10); n2 = function_Random(1, 5); o = function_Operation()
 
-        PROBLEM, ANSWER = function_C(n1, n2, o)
+        PROBLEM, ANSWER = function_Result(n1, n2, o)
         print(f"\nQuestion: {PROBLEM}")
         useranswer = input("Your answer: ")
         

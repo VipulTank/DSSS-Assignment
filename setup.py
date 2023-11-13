@@ -6,4 +6,4 @@ setup( name="DSSS_Homework2",
       author="Vipul", 
       author_email="tankvipul18@gmail.com",
       packages=find_packages(),
-      install_requires=["numpy", "turtles"] )
+      install_requires=["numpy"] )
